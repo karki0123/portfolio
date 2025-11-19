@@ -1,0 +1,26 @@
+li{
+	display: inline-block;
+	color: darkred;
+	width: 90px;
+	float: left;
+
+}
+
+
+
+.name{
+	color: hotpink;
+	display:inline-block;
+	width: 10%;
+}
+header div{
+	vertical-align: center;
+	display:inline-block;
+}
+.imdev .button {
+	display: flex;
+	justify-content: center;
+}
+section{
+	justify-content: center;
+}
