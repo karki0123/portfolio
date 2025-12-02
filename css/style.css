@@ -1,17 +1,23 @@
+:root {
+    --primary-color: darkred;
+    --text-color: white;
+    --background-dark: rgba(0, 0, 0, 0.7);
+    --content-bg: rgba(0, 0, 0, 0.5);
+}
+
+html {
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+}
 
 body {
     height: 100vh;
     padding: 0 5%; 
     margin: 0;
     font-family: Arial, sans-serif; 
-    color: white; 
+    color: var(--text-color); 
 }
 
-html {
-    overscroll-behavior: none;
-}
-
-/* Video Background */
 #newvideo {
     position: fixed;
     top: 0;
@@ -22,99 +28,145 @@ html {
     z-index: -1;
 }
 
-
-header {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 20px 0;
-}
-
-.name {
-    color: white; 
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 0; 
-
-.menu ul {
-    list-style: none; 
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    display: inline-block;
-    color: white; 
-    margin-left: 20px; 
-    float: none; 
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.9em;
-}
-
-li:hover {
-    color: darkred; 
-}
-
-
 section {
     padding-top: 50px; 
+    min-height: 100vh;
 }
 
-
-section > div:not(.button), section > h1:not(.iamdev), section > p {
-    background: rgba(0, 0, 0, 0.5); 
+.info-box, .details-box, .skill-card, .project-card, #contact .Contact {
+    background: var(--content-bg); 
     padding: 15px 25px; 
     margin-bottom: 20px; 
     border-radius: 5px;
     max-width: 800px; 
+    margin-right: auto;
+    margin-left: 0;
 }
 
-
+h1 {
+    color: var(--text-color);
+    font-size: 1.5em;
+    margin-top: 0;
+}
 .iamdev h1 {
-    color: white;
     font-size: 3em;
     margin: 0;
     background: none; 
     padding: 0;
 }
-
-/* Smaller Headings */
-h1 {
-    color: white;
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
 p {
     line-height: 1.5;
     margin: 0;
 }
-
 
 .button {
     display: flex; 
     gap: 15px; 
     margin-bottom: 30px;
 }
-
-.button button {
+.button .btn {
     padding: 10px 20px;
-    border: 2px solid darkred;
-    background-color: darkred;
-    color: white;
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--text-color);
     cursor: pointer;
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
-
-.button button:hover {
+.button .btn:hover {
     background-color: transparent;
-    color: darkred;
+    color: var(--primary-color);
 }
 
-/* Contact Form */
+header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.name-container {
+    z-index: 11;
+}
+.name {
+    color: var(--text-color); 
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0; 
+}
+
+.menu ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.menu li {
+    display: block;
+    color: var(--text-color); 
+    margin-left: 20px; 
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+.menu li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+.menu li:hover {
+    color: var(--primary-color); 
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+#skills .skills-container {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: none;
+    padding: 0;
+}
+.skill-card {
+    flex: 1 1 calc(33.33% - 20px);
+    min-width: 250px;
+    background: var(--content-bg);
+}
+.skill-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+#portfolio .portfolio-grid {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    background: none;
+    padding: 0;
+}
+.project-card {
+    min-height: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary-color);
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
 .Contact label {
     margin-right: 10px;
     font-weight: bold;
@@ -127,17 +179,19 @@ p {
     margin-right: 20px;
     color: black;
 }
+#contact .Contact {
+    max-width: 600px;
+}
 
 .Contact button {
     padding: 8px 15px;
     border: none;
-    background-color: darkred;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     cursor: pointer;
     border-radius: 5px;
 }
 
-/* Footer */
 footer {
     position: fixed;
     bottom: 0;
@@ -145,6 +199,83 @@ footer {
     width: 100%;
     padding: 10px 5%;
     text-align: center;
-    background: rgba(0, 0, 0, 0.7); /* Dark, slightly transparent footer */
+    background: var(--background-dark); 
     font-size: 0.9em;
+    z-index: 5;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 0 8%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .iamdev h1 {
+        font-size: 4em;
+    }
+
+    .skill-card {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 0 5%;
+    }
+
+    .hamburger-icon {
+        display: block; 
+        background: transparent;
+        border: none;
+        color: var(--text-color);
+        font-size: 1.8em;
+        cursor: pointer;
+        z-index: 10;
+        padding: 0;
+    }
+    
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--background-dark);
+        z-index: 9;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        padding-top: 80px;
+    }
+
+    .menu.open {
+        display: block;
+        transform: translateX(0);
+    }
+
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .menu li {
+        margin: 15px 0;
+        font-size: 1.2em;
+    }
+    
+    .scroll-lock {
+        overflow: hidden;
+    }
+    
+    .Contact input[type="text"] {
+        width: 100%;
+        margin: 5px 0 15px 0;
+        display: block;
+    }
+    .Contact label {
+        display: block;
+        margin-bottom: 5px;
+    }
 }

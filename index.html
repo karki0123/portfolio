@@ -1,57 +1,101 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Karki's Portfolio</title>
+    <title>Karki Portfolio</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <video autoplay muted loop id="newvideo">
-        <source src="background/video.mp4" type="">
-    </video>
     
+    <video autoplay muted loop id="newvideo">
+        <source src="background/video.mp4" type="video/mp4">
+    </video>
+
     <header>
-        <div>
+        <div class="name-container">
             <h2 class="name">Karki</h2>
         </div>
-        <div class="menu">
+        
+        <button class="hamburger-icon" id="hamburgerBtn" aria-label="Toggle Menu">
+             <i class="fas fa-bars"></i> 
+        </button>
+
+        <div class="menu" id="mainMenu">
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Service</li>
-                <li>Portfolio</li>
-                <li>Blog</li>
-                <li>Contact</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
 
-    <section>
+    <section id="home">
         <div class="iamdev">
             <h1 class="iamdev">I Am Web Developer</h1>
         </div>
 
-        <div class="new">
+        <div class="info-box">
             <h1>HEADING</h1>
             <p>
                 The Himalayas are a vast mountain system in Asia that forms a barrier between the Tibetan Plateau and the plains of the Indian subcontinent. The name "Himalaya" means "House of snow" in Sanskrit, and the range contains the world's highest peaks, including Mount Everest, with more than 110 peaks exceeding 7,300 meters.
             </p>
         </div>
-        
+
         <div class="button">
-            <button class="button">View Work</button>
-            <button class="button">Hire Me</button>
+            <button class="btn">View Work</button>
+            <button class="btn">Hire Me</button>
         </div>
 
+    </section>
+
+    <section id="about">
         <h1>About Myself</h1>
         <p>A paragraph is a group of sentences that focus on a single topic and are linked by a common theme. It typically starts with a topic sentence, which introduces the main idea, followed by supporting sentences that provide details, examples, or evidence. Paragraphs help organize writing by breaking it into manageable sections, making it easier for the reader to follow the author's thoughts</p>
 
+        <div class="details-box">
+            <h2>Subtitle: My Mission</h2>
+            <p>To deliver high-quality, responsive, and visually appealing web solutions that exceed client expectations and provide a seamless user experience across all devices.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h1>Skills</h1>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>HTML & CSS</h3>
+                <p>Expert in semantic HTML5 and advanced CSS techniques (Flexbox, Grid, SASS).</p>
+            </div>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <p>Proficient in ES6+, DOM manipulation, and asynchronous programming.</p>
+            </div>
+            <div class="skill-card">
+                <h3>React</h3>
+                <p>Experience building modern, scalable single-page applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h1>Portfolio</h1>
+        <div class="portfolio-grid">
+            <div class="project-card">Project 1: E-commerce Site</div>
+            <div class="project-card">Project 2: Landing Page</div>
+            <div class="project-card">Project 3: API Integration</div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Me</h1>
         <div class="Contact">
             <label for="fname">First Name</label>
-            <input type="text" name="">
+            <input type="text" id="fname">
             <label for="lname">Last Name </label>
-            <input type="text" name="">
+            <input type="text" id="lname">
             <button>Submit</button>
         </div>
     </section>
@@ -59,6 +103,8 @@
     <footer>
         <p>All Right Reserved &copy; Done </p>
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
