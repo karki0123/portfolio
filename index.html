@@ -4,24 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Karki Portfolio</title>
+
+    <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    
+
+    <!-- Background Video -->
     <video autoplay muted loop id="newvideo">
         <source src="background/video.mp4" type="video/mp4">
     </video>
 
+    <!-- HEADER -->
     <header>
         <div class="name-container">
             <h2 class="name">Karki</h2>
         </div>
-        
+
+        <!-- Hamburger Icon -->
         <button class="hamburger-icon" id="hamburgerBtn" aria-label="Toggle Menu">
-             <i class="fas fa-bars"></i> 
+            <i class="fas fa-bars"></i>
         </button>
 
+        <!-- Menu -->
         <div class="menu" id="mainMenu">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -33,6 +42,7 @@
         </div>
     </header>
 
+    <!-- HOME -->
     <section id="home">
         <div class="iamdev">
             <h1 class="iamdev">I Am Web Developer</h1>
@@ -41,7 +51,10 @@
         <div class="info-box">
             <h1>HEADING</h1>
             <p>
-                The Himalayas are a vast mountain system in Asia that forms a barrier between the Tibetan Plateau and the plains of the Indian subcontinent. The name "Himalaya" means "House of snow" in Sanskrit, and the range contains the world's highest peaks, including Mount Everest, with more than 110 peaks exceeding 7,300 meters.
+                The Himalayas are a vast mountain system in Asia that forms a barrier between
+                the Tibetan Plateau and the plains of the Indian subcontinent. The name "Himalaya"
+                means "House of snow" in Sanskrit, and the range contains the world's highest peaks,
+                including Mount Everest, with more than 110 peaks exceeding 7,300 meters.
             </p>
         </div>
 
@@ -49,19 +62,27 @@
             <button class="btn">View Work</button>
             <button class="btn">Hire Me</button>
         </div>
-
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
         <h1>About Myself</h1>
-        <p>A paragraph is a group of sentences that focus on a single topic and are linked by a common theme. It typically starts with a topic sentence, which introduces the main idea, followed by supporting sentences that provide details, examples, or evidence. Paragraphs help organize writing by breaking it into manageable sections, making it easier for the reader to follow the author's thoughts</p>
+        <p>
+            A paragraph is a group of sentences that focus on a single topic and are linked by a common
+            theme. It typically starts with a topic sentence, followed by supporting sentences that provide
+            details, examples, or evidence.
+        </p>
 
         <div class="details-box">
             <h2>Subtitle: My Mission</h2>
-            <p>To deliver high-quality, responsive, and visually appealing web solutions that exceed client expectations and provide a seamless user experience across all devices.</p>
+            <p>
+                To deliver high-quality, responsive, and visually appealing web solutions that exceed
+                client expectations and provide a seamless user experience across all devices.
+            </p>
         </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills">
         <h1>Skills</h1>
         <div class="skills-container">
@@ -69,10 +90,12 @@
                 <h3>HTML & CSS</h3>
                 <p>Expert in semantic HTML5 and advanced CSS techniques (Flexbox, Grid, SASS).</p>
             </div>
+
             <div class="skill-card">
                 <h3>JavaScript</h3>
                 <p>Proficient in ES6+, DOM manipulation, and asynchronous programming.</p>
             </div>
+
             <div class="skill-card">
                 <h3>React</h3>
                 <p>Experience building modern, scalable single-page applications.</p>
@@ -80,6 +103,7 @@
         </div>
     </section>
 
+    <!-- PORTFOLIO -->
     <section id="portfolio">
         <h1>Portfolio</h1>
         <div class="portfolio-grid">
@@ -89,22 +113,27 @@
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
         <h1>Contact Me</h1>
         <div class="Contact">
             <label for="fname">First Name</label>
             <input type="text" id="fname">
-            <label for="lname">Last Name </label>
+
+            <label for="lname">Last Name</label>
             <input type="text" id="lname">
+
             <button>Submit</button>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <p>All Right Reserved &copy; Done </p>
+        <p>All Right Reserved &copy; Done</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>

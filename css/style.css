@@ -2,7 +2,7 @@
     --primary-color: darkred;
     --text-color: white;
     --background-dark: rgba(0, 0, 0, 0.7);
-    --content-bg: rgba(0, 0, 0, 0.5);
+    --content-bg: rgba(0, 0, 0, 0.55);
 }
 
 html {
@@ -11,13 +11,13 @@ html {
 }
 
 body {
-    height: 100vh;
-    padding: 0 5%; 
     margin: 0;
-    font-family: Arial, sans-serif; 
-    color: var(--text-color); 
+    padding: 0 5%;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
 }
 
+/* Background Video */
 #newvideo {
     position: fixed;
     top: 0;
@@ -28,228 +28,193 @@ body {
     z-index: -1;
 }
 
-section {
-    padding-top: 50px; 
-    min-height: 100vh;
-}
-
-.info-box, .details-box, .skill-card, .project-card, #contact .Contact {
-    background: var(--content-bg); 
-    padding: 15px 25px; 
-    margin-bottom: 20px; 
-    border-radius: 5px;
-    max-width: 800px; 
-    margin-right: auto;
-    margin-left: 0;
-}
-
-h1 {
-    color: var(--text-color);
-    font-size: 1.5em;
-    margin-top: 0;
-}
-.iamdev h1 {
-    font-size: 3em;
-    margin: 0;
-    background: none; 
-    padding: 0;
-}
-p {
-    line-height: 1.5;
-    margin: 0;
-}
-
-.button {
-    display: flex; 
-    gap: 15px; 
-    margin-bottom: 30px;
-}
-.button .btn {
-    padding: 10px 20px;
-    border: 2px solid var(--primary-color);
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-.button .btn:hover {
-    background-color: transparent;
-    color: var(--primary-color);
-}
-
+/* HEADER */
 header {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.35);
 }
 
-.name-container {
-    z-index: 11;
-}
 .name {
-    color: var(--text-color); 
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: bold;
-    margin: 0; 
+}
+
+/* Desktop Menu */
+.menu {
+    display: flex;
 }
 
 .menu ul {
-    list-style: none; 
+    list-style: none;
+    display: flex;
     padding: 0;
     margin: 0;
-    display: flex;
 }
+
 .menu li {
-    display: block;
-    color: var(--text-color); 
-    margin-left: 20px; 
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.9em;
+    margin-left: 25px;
 }
+
 .menu li a {
-    color: inherit;
+    color: var(--text-color);
     text-decoration: none;
-    display: block;
-    padding: 5px 0;
-}
-.menu li:hover {
-    color: var(--primary-color); 
+    font-size: 1em;
 }
 
-.hamburger-icon {
-    display: none;
-}
-
-#skills .skills-container {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    background: none;
-    padding: 0;
-}
-.skill-card {
-    flex: 1 1 calc(33.33% - 20px);
-    min-width: 250px;
-    background: var(--content-bg);
-}
-.skill-card h3 {
-    margin-top: 0;
+.menu li a:hover {
     color: var(--primary-color);
 }
 
-#portfolio .portfolio-grid {
-    max-width: 100%;
+/* Hamburger Icon (Hidden on Desktop) */
+.hamburger-icon {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    color: var(--text-color);
+}
+
+/* Sections */
+section {
+    padding-top: 60px;
+    min-height: 100vh;
+}
+
+.iamdev h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/* Info Box */
+.info-box, 
+.details-box, 
+.skill-card, 
+.project-card,
+#contact .Contact {
+    background: var(--content-bg);
+    padding: 15px 25px;
+    border-radius: 5px;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.button {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--primary-color);
+}
+
+/* Skills Grid */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-card {
+    flex: 1 1 calc(33.33% - 20px);
+    min-width: 250px;
+    color: white;
+}
+
+.skill-card h3 {
+    color: var(--primary-color);
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    background: none;
-    padding: 0;
 }
+
 .project-card {
-    min-height: 150px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: 1px solid var(--primary-color);
-    transition: transform 0.3s;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .3s;
 }
+
 .project-card:hover {
     transform: translateY(-5px);
 }
 
-.Contact label {
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-.Contact input[type="text"] {
-    padding: 5px;
+/* CONTACT */
+.Contact input {
+    padding: 6px;
     border: none;
-    border-radius: 3px;
-    margin-right: 20px;
     color: black;
-}
-#contact .Contact {
-    max-width: 600px;
-}
-
-.Contact button {
-    padding: 8px 15px;
-    border: none;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    cursor: pointer;
-    border-radius: 5px;
+    border-radius: 4px;
+    margin-right: 20px;
 }
 
+/* FOOTER */
 footer {
     position: fixed;
     bottom: 0;
-    left: 0;
     width: 100%;
+    left: 0;
     padding: 10px 5%;
     text-align: center;
-    background: var(--background-dark); 
-    font-size: 0.9em;
-    z-index: 5;
+    background: var(--background-dark);
+    font-size: .9em;
 }
 
-@media (min-width: 768px) {
-    body {
-        padding: 0 8%;
-    }
-}
+/* -------------------------------------- */
+/* MOBILE MENU FIXES (MAIN ISSUE)         */
+/* -------------------------------------- */
+@media (max-width: 768px) {
 
-@media (min-width: 1024px) {
-    .iamdev h1 {
-        font-size: 4em;
+    body.lock-scroll {
+        overflow: hidden;
     }
 
-    .skill-card {
-        flex: 1 1 calc(33.33% - 20px);
-    }
-}
-
-@media (max-width: 767px) {
-    body {
-        padding: 0 5%;
-    }
-
+    /* Show hamburger */
     .hamburger-icon {
-        display: block; 
-        background: transparent;
-        border: none;
-        color: var(--text-color);
-        font-size: 1.8em;
-        cursor: pointer;
-        z-index: 10;
-        padding: 0;
+        display: block;
+        z-index: 20;
     }
-    
+
+    /* Hide desktop menu */
     .menu {
         display: none;
         position: fixed;
         top: 0;
         right: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--background-dark);
-        z-index: 9;
-        transition: transform 0.3s ease-in-out;
-        transform: translateX(100%);
+        width: 70%;
+        height: 100vh;
+        background: rgba(0,0,0,0.92);
         padding-top: 80px;
+        transform: translateX(100%);
+        transition: .3s;
+        z-index: 15;
     }
 
+    /* When opened */
     .menu.open {
         display: block;
         transform: translateX(0);
@@ -258,24 +223,25 @@ footer {
     .menu ul {
         flex-direction: column;
         text-align: center;
-        width: 100%;
+        gap: 12px; /* FIXED - spacing reduced */
     }
+
     .menu li {
-        margin: 15px 0;
-        font-size: 1.2em;
+        margin: 10px 0;
+        font-size: 1.3em;
     }
-    
-    .scroll-lock {
-        overflow: hidden;
-    }
-    
-    .Contact input[type="text"] {
+
+    /* Inputs in contact full width */
+    .Contact input {
+        display: block;
         width: 100%;
-        margin: 5px 0 15px 0;
-        display: block;
+        margin: 10px 0;
     }
-    .Contact label {
-        display: block;
-        margin-bottom: 5px;
+}
+
+/* Larger Screen Upgrades */
+@media (min-width: 1024px) {
+    .iamdev h1 {
+        font-size: 4em;
     }
 }

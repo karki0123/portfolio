@@ -1,19 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuButton = document.getElementById('hamburgerBtn');
-    const menu = document.getElementById('mainMenu');
-    const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.getElementById("hamburgerBtn");
+    const menu   = document.getElementById("mainMenu");
 
-    menuButton.addEventListener('click', function() {
-        menu.classList.toggle('open');
-        body.classList.toggle('scroll-lock'); 
+    burger.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        document.body.classList.toggle("lock-scroll");
     });
 
-    menu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth < 768) { 
-                menu.classList.remove('open');
-                body.classList.remove('scroll-lock');
-            }
+    // Close mobile menu on link click
+    menu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("open");
+            document.body.classList.remove("lock-scroll");
         });
     });
 });
